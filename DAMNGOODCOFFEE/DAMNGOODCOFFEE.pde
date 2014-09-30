@@ -39,7 +39,7 @@ void setup() {
    
   //angle and speed for rotation
   ang = 0.1;
-  spd = 0.05;
+  spd = 0.01;
    
   //set up initial polyhedron
   verts = new ArrayList();
@@ -53,9 +53,8 @@ void draw() {
   //setup the view
   background(heygirl); 
   translate(offX, offY, offZ);
-  rotateX(sin(-ang*0.3)*0.5);
+  rotateX(sin(-ang*0.2)*0.5);
   rotateY(ang);
-  drawAxis();
    
   //draw the polyhedron
   strokeWeight(50);
@@ -71,7 +70,6 @@ void draw() {
   text(strNotes, height - 100, 50);
   text("next...", height - 10, height - 10);
    
-  //bump up the angle for the spin
   ang += spd;
 }
  
